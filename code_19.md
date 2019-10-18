@@ -8,10 +8,12 @@
 3. 虚拟节点
 
 ## 解题思路
+
 | 知识点 | 使用原因 |
 | :----: | :----: |
 | 虚拟节点 | 头结点可能会被删除 |
 | 双指针 | 使用单指针需要遍历2遍，第一遍确定链表长度，第二遍搜索倒数第n个节点 |
+
 ![Alt Text](https://media.giphy.com/media/chbTvTzZDmBzFpyFgi/giphy.gif)
 
 当q指针指向NULL时，p指针所指向的节点即为倒数第n个节点。
