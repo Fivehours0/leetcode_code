@@ -11,7 +11,7 @@
 
 | 知识点 | 使用原因 |
 | :----: | :----: |
-| 虚拟节点 | 头结点可能会被删除 |
+| 虚拟节点 | 头结点可能会被删除，头节点删除后，可返回虚拟节点->next,即为nullptr |
 | 双指针 | 使用单指针需要遍历2遍，第一遍确定链表长度，第二遍搜索倒数第n个节点 |
 
 ![Alt Text](https://media.giphy.com/media/chbTvTzZDmBzFpyFgi/giphy.gif)
