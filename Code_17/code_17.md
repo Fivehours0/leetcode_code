@@ -11,8 +11,9 @@
     输入: 120
     输出: 21
 
-最大值$$2^{31} -1 = 2,147,483,647$$
-最小值$$-2^{31} = -2,147,483,648$$
+最大值2^{31} -1 = 2,147,483,647
+
+最小值-2^{31} = -2,147,483,648
 
 ### 解题思路
     输入值为 x
@@ -37,32 +38,3 @@
 1.观察是否又类似功能的变量，可否约去，即少定义一些变量。
 2.将某些结构进行简化，例如if中的条件类似时，可以将两个if并成一个。
 
-大佬code:
-
-    三目运算符
-    巧妙的定义long类型
-```java
-    Long result = 0L ;
-    for(;x!=0;x=x/10){
-        result = result*10+x%10;
-    }
-    return result>Integer.MAX_VALUE || result<Integer.MIN_VALUE? 0:result.intValue();
-```
-
-我的code: 
-```java
-        int temp = 0;
-        int rev = 0; 
-        rev = x % 10; // 余数
-        while(x!=0){
-            // 判断溢出
-            if(temp > Integer.MAX_VALUE / 10 || temp < Integer.MIN_VALUE / 10)
-                return 0;
-            if(temp == Integer.MAX_VALUE / 10 && (x > 7 || x < -8))
-                return 0;
-            temp = temp * 10 + rev;
-            x = x / 10; // 商
-            rev = x % 10; // 余数
-        }
-        return temp;
-```
