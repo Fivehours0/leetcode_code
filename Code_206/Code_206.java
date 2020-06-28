@@ -12,6 +12,10 @@
  * p1.val=1 p2=null tmp.val=p1.val tmp.next=p2 p1=p1.next p2=tmp
  * p1.val=2 tmp.val=p1.val tmp.next=p2 p1=p1.next p2=tmp
  * ...
+ *
+ * 知识点：
+ * 1.链表
+ * 2.双指针
  */
 
 package Code_206;
