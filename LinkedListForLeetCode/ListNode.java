@@ -20,7 +20,10 @@ public class ListNode {
     public static void print(ListNode head) {
         ListNode tmp = head;
         while (tmp != null) {
-            System.out.println(tmp.val);
+            System.out.print(tmp.val);
+            if (tmp.next != null)
+                System.out.print("->");
+            else System.out.println("");
             tmp = tmp.next;
         }
     }
